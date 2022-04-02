@@ -1,0 +1,163 @@
+body
+{
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: slategrey;
+  color: white;
+}
+
+/* Heading 1 */
+h1
+{
+  font-family: verdana, arial, sans-sans-serif;
+  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate
+{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+
+/* Start/End Buttons */
+button
+{
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Dropdown Menu */
+.dropdown
+{
+  padding: 10px;
+}
+
+/* Hidden class that changes the visibility of an element to none */
+.hidden
+{
+  display: none;
+}
+
+/* Button 1 Section */
+
+#button1
+{
+  background: lightgreen;
+}
+
+#button1:active, #button1.lit
+{
+  background: green;
+}
+
+/* Button 2 Section */
+
+#button2
+{
+  background: lightblue;
+}
+
+#button2:active, #button2.lit
+{
+  background: blue;
+}
+
+/* Button 3 Section */
+
+#button3
+{
+  background: pink;
+}
+
+#button3:active, #button3.lit
+{
+  background: red;
+}
+
+/* Button 4 Section */
+
+#button4
+{
+  background: lightyellow;
+}
+
+#button4:active, #button4.lit
+{
+  background: yellow;
+}
+
+/* Button 5 Section */
+
+#button5
+{
+  background: darkcyan;
+}
+
+#button5:active, #button5.lit
+{
+  background: cyan;
+}
+
+/* Button 6 Section */
+
+#button6
+{
+  background: darkred;
+}
+
+#button6:active, #button6.lit
+{
+  background: red;
+}
+
+/* Button 7 Section */
+
+#button7
+{
+  background: darkmagenta;
+}
+
+#button7:active, #button7.lit
+{
+  background: magenta;
+}
+
+/* Game Button Area Section */
+
+#gameButtonArea > button
+{
+  width: 200px;
+  height: 200px;
+  margin: 2px;
+}
+
+.cap
+{
+  background: #e63946;
+}
+
+#tries {
+  color: green;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#count {
+  color: red;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#buttonCounter {
+  color: green;
+  font-size: 1.2em;
+  font-weight: bold;
+}

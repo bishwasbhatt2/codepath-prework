@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title of the Website -->
+  <title>Light and Sound Memory Game</title>
+
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"/>
+  <!-- Linking CSS to HTML File -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Linking Javascript to HTML File -->
+  <script src="script.js" defer></script>
+
+  <!-- Custom Favicon Icon For the Website -->
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAhP8AAAAAAACz/wAA4f8A0P8AAAD/rgCM/wAA/3cAAP8rAAAA/90A/6YAAAAA/wAA/1EA/wCZAP/lAAAAAAAAEREREREREREbu7ERERu7sRAAAREREAABEiIhERESIiETMzERERMzMREZkRERERmRERVRERERFVERHMEREREcwREWYRERERZhERRBERERFEERHu7u7u7u4REaqqqqqqqhERdxERERF3ERGIiIiIiIgREd3d3d3d3RERERERERERH//wAAh+EAAIfhAACH4QAAh+EAAOf5AADn+QAA5/kAAOf5AADn+QAA4AEAAOABAADn+QAA4AEAAOABAAD//wAA" rel="icon" type="image/x-icon" />
+
+</head>
+
+<body>
+
+  <!-- Title Of the Game -->
+  <h1>Light and Sound Memory game</h1>
+
+  <p>
+    <!-- Description of the Game -->
+    Welcome to the game! Repeat back the pattern by pressing buttons.
+  </p>
+
+  <div class="row justify-content-center">
+  <div class="col-4 text-left">
+    <h5>
+      Attempts left: <span id="tries">3</span>
+      <br />
+      Time Remaining: <span id="count">10</span>
+    </h5>
+  </div>
+
+
+  <div class="col-4 text-center">
+    <!-- This button starts the game  -->
+    <button id="startBtn" onclick="startGame()">
+      Start
+    </button>
+
+    <!-- This button ends the game -->
+    <button id="stopBtn" class="hidden" onclick="stopGame()">
+      Stop
+    </button>
+  </div>
+
+  <div class="col-4 text-right">
+  <h5>
+    Max Score: <span id="maxScore">0</span>
+    <br />
+    Current Score: <span id="currentScore">0</span>
+  </h5>
+</div>
+</div>
+
+
+</div>
+
+
+  <!-- Four different types of squares corresponding to different soundqueues -->
+  <div id="gameButtonArea">
+    <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
+    <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
+    <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
+    <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"></button>
+    <button id="button5" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone()" class="hidden"></button>
+    <button id="button6" onclick="guess(6)" onmousedown="startTone(6)" onmouseup="stopTone()" class="hidden"></button>
+    <button id="button7" onclick="guess(7)" onmousedown="startTone(7)" onmouseup="stopTone()" class="hidden"></button>
+  </div>
+
+  <div class="row justify-content-left">
+    <div class="col-6 text-left">
+      <h4>
+        Buttons:
+        <button id="decBut" onclick="adjustButtonDown()">&lt</button>
+        <span id="buttonCounter">4</span>
+        <button id="incBut" onclick="adjustButtonUp()">&gt</button>
+      </h4>
+      <br />
+      <h4>
+        Pattern Length:
+        <button id="decPat" onclick="adjustPatternDown()">&lt</button>
+        <span id="patternCounter">8</span>
+        <button id="incPat" onclick="adjustPatternUp()">&gt</button>
+      </h4>
+    </div>
+  </div>
+
+
+</body>
